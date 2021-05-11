@@ -1,0 +1,80 @@
+Basic commands
+
+- There is staging area before commiting file.
+    -To add a file in staging area
+        git add <fileName>
+            // Now file is successfully added to staging area.
+
+    -To add multiple files into staging area
+        git add .
+            //This will add all files into sta
+
+    -To check the status
+        git status
+            // This will show status like changes to be commited and now we can commit
+
+    -To restore or untrack or unstage file
+        git restore --staged <fileName>
+            // Now any file which is added to staging area will be undo and goes back to untrack stage
+
+    -To save file 
+        git commit  
+        or
+        git commit -m "commit message"
+            // commit message indicates what changes you have made in this commit
+            // very first commit is called as initial commit
+            // Save the changes
+
+    -To Commit without adding to staging area
+        git commit -am "commit message"
+            //This will directly commit without adding to staging area
+
+    - To check log
+        git log
+            //shows where the head is and all commits
+
+
+
+
+Branching commands:
+-We can create multiple branches here and later on we merge them into master branch
+
+    - To make new branch
+        git branch <branchName>
+            // This will create new branch having copy of master branch
+            // contain same contents present master branch
+
+    
+    - To transfer control to other branch
+        git checkout <branchName>
+            // Now your control moved to specific(given) branch 
+
+Merging commands
+- suppose you have made changes in new branch say 'v1' now you want to merge those changes
+  to master branch we use merge 
+
+    - For that first switch to master branch and 
+        git merge <branchName>
+            //now you are in master branch and adding changes of v1 branch to master branch
+            //when this command gets hit it merge v1 branch to master branch
+            //now changes of v1 branch also attached to master branch     
+
+
+Remote Operations :
+-Used To push or pull over github
+
+    -To set Remote Location
+        git remote add <OriginName> <GitURL>
+        eg. git remote add origin https://github.com/mahajansomesh4/GitDemo.git
+            // This command set a remote server from where we push or pull files
+            // The OriginName can be anything you want
+
+    -To check your Remote server
+        git remote -v
+        // This command returns the GitURL of push and pull request
+        // Means that from where we make pull and pull request
+
+    -To push on github 
+        git push -u <OriginName> <branchName>
+        eg. git push -u origin master
+            
